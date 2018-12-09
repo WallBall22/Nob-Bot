@@ -13,37 +13,14 @@ client.on('ready', () => {
     client.user.setStatus('online')
     client.user.setPresence({
         game: {
-            name: 'الكلام هنا',
+            name: '*invite *help',
             type: "STREAMING",
             url: "https://www.twitch.tv/."
         }
     });
 });
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Brodcast Bot`,"https://www.twitch.tv/dggamingbot")
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
-});
+client.on('ready',  () => {
+  
  client.on('message', message => {
     var prefix = "*";
     
