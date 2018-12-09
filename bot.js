@@ -6,7 +6,7 @@ const prefix = '*'
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`بدايه تحت التطوير`,"https://www.twitch.tv/dggamingbot")
+client.user.setGame(`*invite *help`,"https://www.twitch.tv/dggamingbot")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -68,7 +68,7 @@ client.user.setGame(`بدايه تحت التطوير`,"https://www.twitch.tv/dg
 
     .setTitle('New Member!')
 
-    .setDescription('Welcome To server')
+    .setDescription('❤Welcome To server❤')
 
     .addField('**ID Member:',"" +  msg.user.id, true)
 
@@ -127,6 +127,49 @@ client.on('message', message => {
     }
 
 });
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor(0x5500ff)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+      guild.owner.send(embed)
+});
+new paste 
+
+
+Untitled
+ A GUEST   NOV 23RD, 2018   107  NEVER
+
+Not a member of Pastebin yet? Sign Up, it unlocks many cool features!
+rawdownloadreport 0.78 KB
+ client.on('message', ra3d => {
+var prefix = "*";
+                        let args = ra3d.content.split(" ").slice(1).join(" ")
+if(ra3d.content.startsWith(prefix + 'cc')) {
+    if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
+             if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**');
+              ra3d.channel.send(`**✅ |تم انشاء __${args}__ لون**`);
+                  setInterval(function(){})
+                    let count = 0;
+                    let ecount = 0;
+          for(let x = 1; x < `${parseInt(args)+1}`; x++){
+            ra3d.guild.createRole({name:x,
+              color: 'RANDOM'})
+              }
+            }
+       });
+client.on("guildMemberAdd", member => {
+
+    member.createDM().then(function (channel) {
+
+        return channel.send(`:rose:  ولكم نورت السيرفر :rose:
+
+        :crown: اسم العضو  ${member}:crown:  
+
+        انت العضو رقم ${member.guild.memberCount} `)
+
+    }).catch(console.error)
+
+})
 
 
 
