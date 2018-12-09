@@ -93,7 +93,7 @@ client.user.setGame(`بدايه تحت التطوير`,"https://www.twitch.tv/dg
 
   if (true) {
 
-if (message.content === '.invite') {
+if (message.content === '*invite') {
 
       message.author.send('  https://discordapp.com/api/oauth2/authorize?client_id=521253056218791947&permissions=8&scope=bot |  تفضل ربط البوت     ').catch(e => console.log(e.stack));
 
