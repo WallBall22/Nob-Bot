@@ -3,7 +3,22 @@ const client = new Discord.Client();
 const prefix = '*'
  
  
- 
+ client.on('ready',  () => {
+  console.log(`Logged in as * [ " ${client.user.username} " ] servers!  [ " ${client.guilds.size} " ]`);
+  console.log(`Logged in as * [ " ${client.user.username} " ] Users!    [ " ${client.users.size} " ]`);
+  console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+});
+
+client.on('ready', () => {
+    client.user.setStatus('online')
+    client.user.setPresence({
+        game: {
+            name: 'الكلام هنا',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/."
+        }
+    });
+});
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`Brodcast Bot`,"https://www.twitch.tv/dggamingbot")
